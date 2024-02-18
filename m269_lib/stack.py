@@ -1,5 +1,6 @@
 """This module provides implementations of the Stack ADT."""
 
+
 class Stack:
     """A last-in, first-out sequence of objects, implemented with a Python list.
 
@@ -38,7 +39,8 @@ class Stack:
     def pop(self) -> object:
         """Remove and return the top item from the stack.
 
-        Preconditions: self.size() > 0
+        Preconditions: `self.size() > 0`
+        Complexity: O(1)
         """
         return self._members.pop(-1)
 
@@ -46,8 +48,10 @@ class Stack:
         """Put the given item on top of the stack.
 
         Postconditions: `self.top() == item`
+        Complexity: O(1)
         """
         self._members.append(item)
+
 
 class LinkedListStack:
     """A last-in, first-out sequence of objects, implemented with a linked list.
@@ -71,33 +75,38 @@ class LinkedListStack:
     class _Node:
         """A node in a linked list."""
 
-        def __init__(self, item: object):
+        def __init__(self, item: object) -> None:
             """Initialise the node with the given item."""
             self.item = item
             self.next = None
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Initialise the stack to be empty."""
         self._head = None
         self._length = 0
 
     def size(self) -> int:
-        """Return the number of items in the stack."""
+        """Return the number of items in the stack.
+
+        Complexity: O(1)
+        """
         return self._length
 
     def top(self) -> object:
         """Return the top item in the stack.
 
-        Preconditions: self.size() > 0
+        Preconditions: `self.size() > 0`
+        Complexity: O(1)
         """
-        return self._head._item
+        return self._head.item
 
     def pop(self) -> object:
         """Remove and return the top item from the stack.
 
-        Preconditions: self.size() > 0
+        Preconditions: `self.size() > 0`
+        Complexity: O(1)
         """
-        item = self._head._item
+        item = self._head.item
         self._head = self._head.next
         self._length = self._length - 1
         return item
@@ -106,6 +115,7 @@ class LinkedListStack:
         """Put the given item on top of the stack.
 
         Postconditions: `self.top() == item`
+        Complexity: O(1)
         """
         node = LinkedListStack._Node(item)
         node.next = self._head
