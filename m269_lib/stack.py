@@ -1,10 +1,10 @@
 """This module provides implementations of the Stack ADT."""
 
 
-class Stack:
+class PythonListStack:
     """A last-in, first-out sequence of objects, implemented with a Python list.
 
-    Usage example:
+    This class can also be imported as `Stack`. Usage example:
     >>> from m269_lib import Stack
     >>> stack = Stack()
     >>> for n in range(3):

@@ -29,6 +29,7 @@
 
             <h2>Submodules</h2>
             <ul>
+                    <li><a href="m269_lib/queue.html">queue</a></li>
                     <li><a href="m269_lib/stack.html">stack</a></li>
             </ul>
 
@@ -48,7 +49,7 @@ m269_lib    </h1>
 
                         <div class="docstring"><p>This is a pedagogical algorithms and data structures library.</p>
 
-<p>It currently implements the Stack abstract data type (ADT).</p>
+<p>It currently implements the Stack and Queue abstract data types (ADTs).</p>
 
 <p>To install the library in the currently active environment, enter in a terminal:</p>
 
@@ -75,7 +76,7 @@ The documentation is licensed under a
 
                         <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos"> 1</span></a><span class="sd">&quot;&quot;&quot;This is a pedagogical algorithms and data structures library.</span>
 </span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a>
-</span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a><span class="sd">It currently implements the Stack abstract data type (ADT).</span>
+</span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a><span class="sd">It currently implements the Stack and Queue abstract data types (ADTs).</span>
 </span><span id="L-4"><a href="#L-4"><span class="linenos"> 4</span></a>
 </span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a><span class="sd">To install the library in the currently active environment, enter in a terminal:</span>
 </span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a><span class="sd">```bash</span>
@@ -94,7 +95,11 @@ The documentation is licensed under a
 </span><span id="L-19"><a href="#L-19"><span class="linenos">19</span></a><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-20"><a href="#L-20"><span class="linenos">20</span></a>
 </span><span id="L-21"><a href="#L-21"><span class="linenos">21</span></a><span class="c1"># Import all classes so that they can be directly imported from m269_lib.</span>
-</span><span id="L-22"><a href="#L-22"><span class="linenos">22</span></a><span class="kn">from</span> <span class="nn">.stack</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="L-22"><a href="#L-22"><span class="linenos">22</span></a><span class="c1"># Provide short names for the recommended implementations.</span>
+</span><span id="L-23"><a href="#L-23"><span class="linenos">23</span></a><span class="kn">from</span> <span class="nn">.queue</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="L-24"><a href="#L-24"><span class="linenos">24</span></a><span class="kn">from</span> <span class="nn">.queue</span> <span class="kn">import</span> <span class="n">LinkedListQueue</span> <span class="k">as</span> <span class="n">Queue</span>
+</span><span id="L-25"><a href="#L-25"><span class="linenos">25</span></a><span class="kn">from</span> <span class="nn">.stack</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="L-26"><a href="#L-26"><span class="linenos">26</span></a><span class="kn">from</span> <span class="nn">.stack</span> <span class="kn">import</span> <span class="n">PythonListStack</span> <span class="k">as</span> <span class="n">Stack</span>
 </span></pre></div>
 
 

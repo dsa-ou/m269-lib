@@ -38,15 +38,19 @@ target-version = "py310"
 select = ["ALL"]
 ignore = [              # ignore these rules:
     "ANN101",           # provide the type of `self`
+    "E711",             # comparison should be `... is None`
     "SIM110",           # simplify for-loops with all() or any()
     "ISC001", "COM812", # these rules may conflict with the formatter
-    ]
+]
 
 [tool.ruff.lint.pydocstyle]
-convention = "pep257"       # this project's docstrings follow PEP 257
+convention = "pep257"   # this project's docstrings follow PEP 257
 
 [tool.ruff.lint.per-file-ignores]
-"__init__.py" = ["F403"]    # ignore `from ... import *` for re-exporting names
+"__init__.py" = [       # this file just re-exports names, so ignore these rules:
+    "F401",             # unused imported name
+    "F403"              # `from ... import *` doesn't allow to detect undefined names
+]
 
 [build-system]
 requires = ["poetry-core"]
