@@ -1,6 +1,6 @@
 """This is a pedagogical algorithms and data structures library.
 
-It currently implements the Stack and Queue abstract data types (ADTs).
+It currently implements the Bag (multiset), Stack and Queue abstract data types (ADTs).
 
 To install the library in the currently active environment, enter in a terminal:
 ```bash
@@ -20,6 +20,8 @@ The documentation is licensed under a
 
 # Import all classes so that they can be directly imported from m269_lib.
 # Provide short names for the recommended implementations.
+from .bag import *
+from .bag import PythonDictBag as Bag
 from .queue import *
 from .queue import LinkedListQueue as Queue
 from .stack import *

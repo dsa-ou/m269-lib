@@ -39,7 +39,9 @@ target-version = "py310"
 select = ["ALL"]
 ignore = [              # ignore these rules:
     "ANN101",           # provide the type of `self`
+    "C408",             # use `{}` instead of `dict()`
     "E711",             # comparison should be `... is None`
+    "RET505",           # unnecessary `else` after `return`
     "SIM110",           # simplify for-loops with all() or any()
     "ISC001", "COM812", # these rules may conflict with the formatter
 ]
@@ -52,6 +54,7 @@ convention = "pep257"   # this project's docstrings follow PEP 257
     "F401",             # unused imported name
     "F403"              # `from ... import *` doesn't allow to detect undefined names
 ]
+"bag.py" = ["SLF001"]   # ignore private accesses, as they are to the same class
 
 [build-system]
 requires = ["poetry-core"]
