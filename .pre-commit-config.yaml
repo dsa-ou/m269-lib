@@ -17,6 +17,14 @@ repos:
         pass_filenames: false
         types: [python]
 
+    -   id: language
+        name: allowed
+        entry: poetry run allowed -m m269_lib/*.py
+        exclude: __init__.py
+        language: system
+        pass_filenames: false
+        types: [python]
+
     -   id: lint
         name: ruff-check
         entry: poetry run ruff check --force-exclude
