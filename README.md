@@ -4,8 +4,8 @@ It was created for M269, our DSA course, but we hope it's of use by other course
 
 The current version implements
 - bags (multisets), with a Python dictionary
-- queues, with Python lists and linked lists
-- stacks, Python lists and linked lists.
+- queues, with a Python list and a linked list
+- stacks, with a Python list and a linked list.
 
 The library uses a small subset of Python's language and standard library,
 to make it easier to understand.
